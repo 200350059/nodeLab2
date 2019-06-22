@@ -1,0 +1,15 @@
+
+form(action=(team ? "/teams/update" : "/teams"), method="POST")
+    if team
+        input(type="hidden", name="id", value=team.id)
+    .form-group
+        label Title
+        input.form-control(name="team[title]", required, value=(team ? team.title : null))
+
+    .form-group
+        label Content
+        textarea.form-control(name="team[content]")
+            = team ? team.content : null
+
+    .form-group
+        button.btn.btn-dark(type="submit") Submit
