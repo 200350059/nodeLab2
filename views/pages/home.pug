@@ -1,0 +1,8 @@
+extends ../layouts/main.pug
+
+block globals 
+    - const title =  "Blog"
+block content
+        h1#header= title
+
+        p.intro-text.second-class(data-attr="value") I love Europe.
