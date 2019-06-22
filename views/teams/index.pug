@@ -19,6 +19,6 @@ block content
               td
                 a(href=`/teams/${team.id}/edit`) edit
                 = " | "
-                form.destroy(action="/teams/destroy", method="POST", onsubmit='return confirm("Really?");')
+                form.destroy(action="/teams/delete", method="POST", onsubmit='return confirm("Really?");')
                   input(type="hidden", name="id", value=team.id)
                   input(type="submit", value="delete")
